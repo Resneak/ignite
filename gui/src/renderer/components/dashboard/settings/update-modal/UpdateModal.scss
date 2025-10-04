@@ -1,0 +1,47 @@
+.update-modal-component-title {
+    font-size: 32px;
+    margin-bottom: 0.75em;
+    text-align: center;
+}
+
+.update-modal-component-description {
+    font-size: 18px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.update-modal-component-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.update-modal-component-button {
+    border: 0;
+    cursor: pointer;
+    flex: 1;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(132, 123, 255, 0.15);
+    color: #fff;
+    text-align: center;
+    transition: opacity 200ms ease;
+    margin-right: 16px;
+}
+
+.update-modal-component-button:last-child {
+    margin-right: 0;
+}
+
+.update-modal-component-button.update-modal-component-button-primary {
+    background-color: #be2a50;
+}
+
+.update-modal-component-button:hover {
+    opacity: 0.9;
+}
+
+.update-modal-component-button:active {
+    opacity: 0.8;
+}

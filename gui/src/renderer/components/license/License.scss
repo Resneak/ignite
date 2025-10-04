@@ -1,0 +1,110 @@
+// TODO: move all these content-boxes to a shared .scss file
+.content-box {
+    height: 100%;
+}
+
+.column.login,
+.columns.login,
+.columns.main,
+.column.main {
+    height: 100%;
+}
+
+.column.login.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: url('../../../../assets/loginBackground.png') no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    & > span:first-child {
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    & #auth-error {
+        margin-bottom: 50px;
+    }
+}
+
+#auth-app-version {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.discord-login {
+    background: #be2a50;
+    vertical-align: middle;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+    display: flex;
+    text-align: center;
+    /* adjustment */
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 50px;
+    color: white;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    /* new */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.09);
+    &:hover {
+        color: white;
+        background-color: rgb(170, 37, 70);
+        cursor: pointer;
+        & > span:hover {
+            cursor: pointer;
+        }
+    }
+    &:disabled:hover {
+        background-color: rgba(132, 123, 255, 0.15);
+        cursor: not-allowed;
+        & > span:hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.discord-login > span {
+    flex: 1;
+    font-weight: bold;
+}
+
+.license-box {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.license-display {
+    font-size: 1.5rem;
+}
+
+.license-text {
+    text-align: left;
+    width: 360px;
+    font-size: 20px;
+}
+
+.license-input,
+.license-input:hover {
+    height: 50px;
+    width: 360px;
+    margin-bottom: 25px;
+    border: none;
+    color: rgba(132, 123, 255, 1);
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(132, 123, 255, 0.1);
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 0;
+}

@@ -1,0 +1,83 @@
+.form-component-input::placeholder,
+.form-component-textarea::placeholder {
+    color: rgba(132, 123, 255, 0.5);
+}
+
+.form-component-input:focus,
+.form-component-textarea:focus {
+    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.form-component-row {
+    display: flex;
+}
+.columns:not(:last-child) {
+    margin-bottom: calc(1.5rem - 0.75rem);
+}
+.columns,
+.columns:last-child {
+    margin: 0;
+}
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+}
+.form-component-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.form-component-input,
+.form-component-textarea {
+    margin-top: 0.75rem;
+    background-color: rgba(132, 123, 255, 0.15);
+    color: #847bff;
+    border: none;
+    resize: none;
+}
+.field {
+    padding-top: 10px;
+}
+.input,
+.textarea {
+    box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+    max-width: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: calc(0.75em - 1px);
+    padding-right: calc(0.75em - 1px);
+    padding-top: calc(0.5em - 1px);
+    position: relative;
+    vertical-align: top;
+    margin: 0;
+}
+
+.textarea {
+    align-items: flex-start !important;
+    min-height: 128px;
+    max-height: 640px;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+    text-align: justify;
+    display: flex;
+    padding: 11px;
+    white-space: pre-wrap;
+    vertical-align: initial !important;
+    margin: 0;
+}

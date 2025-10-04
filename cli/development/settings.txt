@@ -1,0 +1,10 @@
+2Captcha
+API KEY: 9dcbe46e93f0c0a847cb6a49d1e25d02
+
+AYCD Autosolve
+API KEY: 2d431be9-2752-4835-97b6-ee8ab2b668b3
+TOKEN: 178695-4726a9e8-69cd-4aa7-8f7a-ec295aae92f6
+
+Capmonster
+API KEY:  ab181799d947ba6a0d64c3c325ccbce6
+

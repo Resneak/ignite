@@ -1,0 +1,11 @@
+.dashboard-page {
+    height: 100%;
+    width: 100%;
+    padding: 40px 40px 0 40px;
+    display: grid;
+    gap: 42px 32px;
+    grid-template:
+        'tile-1 tile-2 tile-3' min-content
+        'purchase-history purchase-history stats' 1fr / 1fr 1fr 1fr;
+    grid-auto-flow: row;
+}

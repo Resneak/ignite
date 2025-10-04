@@ -1,0 +1,37 @@
+.main-content,
+.spinner-content {
+    background-color: #0a0a27;
+}
+
+.main-content {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    background-color: #0a0a27;
+}
+
+.content-box {
+    height: 100%;
+}
+
+.dashboard-page-content-box {
+    height: calc(100% - 80px);
+}
+
+.dashboard-page-react-container {
+    height: 100%;
+    width: 100%;
+}
+
+.radial-glow {
+    position: absolute;
+    left: -2.99%;
+    right: -28.4%;
+    top: -68.44%;
+    bottom: 32.22%;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.5;
+    display: block;
+    background: radial-gradient(49% 49% at 49% 49%, #3a3a8d 0%, rgba(15, 15, 53, 0) 100%);
+}

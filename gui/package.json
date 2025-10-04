@@ -1,0 +1,191 @@
+{
+    "name": "ignite",
+    "version": "0.6.0",
+    "description": "",
+    "main": "./dist/main.js",
+    "private": true,
+    "scripts": {
+        "build-main": "cross-env NODE_ENV=production webpack --config webpack.main.prod.config.js",
+        "build-renderer": "cross-env NODE_ENV=production webpack --config webpack.renderer.prod.config.js",
+        "build": "npm run build-main && npm run build-renderer",
+        "start-renderer-dev": "webpack serve --config webpack.renderer.dev.config.js",
+        "start-main-dev": "webpack --config webpack.main.config.js && electron .",
+        "start-dev": "cross-env START_HOT=1 npm run start-renderer-dev",
+        "start-dev-persist": "cross-env NODE_ENV=persist npm run start-dev",
+        "prestart": "npm run build",
+        "start": "electron .",
+        "lint": "eslint --ext=jsx,js,tsx,ts src",
+        "test": "jest",
+        "pretest:e2e": "npm run build",
+        "test:e2e": "jest '(\\/test\\/e2e/).*'",
+        "pack": "npm run build && electron-builder --dir",
+        "dist": "npm run build && electron-builder",
+        "postinstall": "electron-builder install-app-deps",
+        "cleanup": "rimraf dist release",
+        "format": "prettier \"{src,test}/**/*.{js,ts,tsx,json,css,scss,md}\" --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": ""
+        }
+    },
+    "lint-staged": {
+        "{src,test}/**/*.{json,css,scss,md}": [
+            "prettier --config ./.prettierrc --write"
+        ],
+        "{src,test}/**/*.{js,ts,tsx}": [
+            "prettier --config ./.prettierrc --write",
+            "eslint --ext=jsx,js,ts,tsx --fix src"
+        ]
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": ".+\\.test\\.ts",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "json",
+            "node"
+        ]
+    },
+    "build": {
+        "productName": "Ignite",
+        "appId": "com.ignitebot.ignite",
+        "afterPack": "./scripts/after-pack.js",
+        "mac": {
+            "category": "public.app-category.developer-tools",
+            "icon": "assets/icon.png",
+            "publish": [
+                {
+                    "provider": "generic",
+                    "url": "https://storage.googleapis.com/ignite-releases"
+                }
+            ]
+        },
+        "directories": {
+            "output": "release",
+            "buildResources": "assets"
+        },
+        "files": [
+            "dist/",
+            "node_modules/",
+            "package.json"
+        ],
+        "win": {
+            "icon": "assets/icon.png",
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64",
+                        "ia32"
+                    ]
+                }
+            ],
+            "publish": [
+                {
+                    "provider": "generic",
+                    "url": "https://storage.googleapis.com/ignite-releases"
+                }
+            ]
+        }
+    },
+    "author": {
+        "name": "Ignite Bot LLC",
+        "email": "support@ignitebot.io"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.0",
+        "@babel/plugin-proposal-decorators": "^7.13.15",
+        "@babel/polyfill": "^7.10.4",
+        "@babel/preset-env": "^7.14.0",
+        "@babel/preset-react": "^7.13.13",
+        "@babel/preset-typescript": "^7.13.0",
+        "@hot-loader/react-dom": "^16.13.0",
+        "@types/electron-devtools-installer": "^2.2.0",
+        "@types/ffi-napi": "^2.4.3",
+        "@types/form-data": "^2.5.0",
+        "@types/jest": "^26.0.23",
+        "@types/luxon": "^1.26.5",
+        "@types/react": "^17.0.4",
+        "@types/react-dom": "^17.0.3",
+        "@types/react-redux": "^7.1.16",
+        "@types/react-router-dom": "^5.1.5",
+        "@types/react-toggle": "^4.0.2",
+        "@types/ref-napi": "^1.4.1",
+        "@types/ref-struct-di": "^1.1.0",
+        "@types/styled-components": "^5.1.9",
+        "@types/tough-cookie": "^4.0.0",
+        "@types/uuid": "^8.0.0",
+        "@types/webpack-env": "^1.15.2",
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
+        "asarmor": "^1.8.0",
+        "babel-loader": "^8.1.0",
+        "bootstrap": "^4.6.0",
+        "copy-webpack-plugin": "^6.4.1",
+        "cross-env": "^7.0.2",
+        "css-loader": "^3.6.0",
+        "electron": "^8.5.5",
+        "electron-builder": "^22.10.5",
+        "electron-devtools-installer": "^3.2.0",
+        "electron-updater": "^4.3.8",
+        "eslint": "^7.25.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.0.8",
+        "file-loader": "^6.0.0",
+        "fork-ts-checker-webpack-plugin": "^4.1.6",
+        "html-webpack-plugin": "^4.5.2",
+        "husky": "^4.3.8",
+        "image-webpack-loader": "^7.0.1",
+        "jest": "^26.4.2",
+        "lint-staged": "^10.5.4",
+        "luxon": "^1.26.0",
+        "prettier": "^2.2.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-google-recaptcha": "^2.1.0",
+        "react-hook-form": "^5.7.2",
+        "react-hot-loader": "^4.12.21",
+        "react-icons": "^4.2.0",
+        "react-redux": "^7.2.4",
+        "react-router-dom": "^5.2.0",
+        "react-toggle": "^4.1.2",
+        "redux-devtools-extension": "^2.13.9",
+        "rimraf": "^3.0.2",
+        "sass": "^1.32.12",
+        "sass-loader": "^11.0.1",
+        "source-map-loader": "^2.0.1",
+        "style-loader": "^2.0.0",
+        "styled-components": "^5.2.3",
+        "ts-jest": "^26.5.5",
+        "typescript": "^4.2.4",
+        "webpack": "^5.36.2",
+        "webpack-cli": "^4.6.0",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^4.2.2",
+        "webpack-obfuscator": "^3.3.0"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.6",
+        "discord-rich-presence": "0.0.8",
+        "ffi-napi": "^3.0.1",
+        "form-data": "^3.0.1",
+        "got": "^11.8.2",
+        "hwid": "^0.2.1",
+        "redux": "^4.1.0",
+        "redux-persist": "^6.0.0",
+        "ref-napi": "^2.0.3",
+        "ref-struct-di": "^1.1.1",
+        "tough-cookie": "^4.0.0",
+        "uuid": "^8.2.0"
+    }
+}

@@ -1,0 +1,41 @@
+.nav-user-profile {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: background-color 150ms ease;
+}
+
+.nav-user-profile-image {
+    display: block;
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 2px solid #847bff;
+}
+
+.nav-user-profile-right {
+    text-align: left;
+    margin-left: 8px;
+    line-height: 1;
+}
+
+/* keep to one line, handle overflow */
+.nav-user-profile-username,
+.nav-user-profile-type {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-user-profile-username {
+    font-size: 18px;
+    margin-bottom: -3px;
+}
+
+.nav-user-profile-type {
+    color: #847bff;
+    font-size: 14px;
+}

@@ -1,0 +1,51 @@
+.nav-control-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 52px;
+}
+
+.nav-control-button {
+    display: block;
+    height: 18px;
+    width: 18px;
+    margin-left: 14px;
+    margin-right: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: filter 150ms ease;
+    -webkit-app-region: no-drag;
+}
+
+.nav-control-button:first-child {
+    margin-left: 0;
+}
+
+.nav-control-button:last-child {
+    margin-right: 0;
+}
+
+.nav-control-button:hover {
+    filter: brightness(1.2);
+}
+
+.nav-control-minimize {
+    display: block;
+    background-image: url('https://www.ignitebot.io/static/images/min.svg');
+    background-size: 13px 3px;
+}
+
+.nav-control-divider {
+    height: 32px;
+    width: 1px;
+    border-radius: 2px;
+    opacity: 0.1;
+    background-color: #847bff;
+}
+
+.nav-control-close {
+    display: block;
+    background-image: url('https://www.ignitebot.io/static/images/close.svg');
+    background-size: 13px 13px;
+}

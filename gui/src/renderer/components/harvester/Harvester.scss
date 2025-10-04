@@ -1,0 +1,401 @@
+html {
+    background-color: #fff;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body,
+html {
+    background-color: transparent;
+    color: #fff;
+    overflow: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
+    height: 100%;
+}
+
+body * {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+    outline: 0 !important;
+}
+
+body {
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+body > div {
+    height: 100%;
+}
+
+body,
+.main-content,
+.spinner-content,
+.modal-background {
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6.5px;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(132, 123, 255, 0.23);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000020;
+    border-radius: 4px;
+}
+
+html,
+body {
+    font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+}
+
+html > body > div {
+    height: 100%;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    user-select: none;
+    background: radial-gradient(100% 100% at 53.3% -28.31%, #2c1c55 0%, #101032 100%);
+    overflow: hidden;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.top-bar {
+    position: relative;
+    height: 50px;
+    background-color: #14143b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-app-region: drag;
+}
+
+.top-bar-title {
+    font-size: 15px;
+}
+
+.top-bar-controls {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    right: 18px;
+    height: 100%;
+}
+
+.top-bar-control {
+    display: block;
+    height: 18px;
+    width: 18px;
+    margin-right: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: filter 150ms ease;
+    -webkit-app-region: no-drag;
+}
+
+.top-bar-control:first-child {
+    margin-left: 0;
+}
+
+.top-bar-control:last-child {
+    margin-right: 0;
+}
+
+.top-bar-control:hover {
+    filter: brightness(1.2);
+}
+
+.top-bar-control:last-child {
+    margin-right: 0;
+}
+
+.close-button {
+    display: block;
+    background-image: url('https://www.ignitebot.io/static/images/close.svg');
+    background-size: 13px 13px;
+}
+
+.minimize-button {
+    display: block;
+    background-image: url('https://www.ignitebot.io/static/images/min.svg');
+    background-size: 13px 3px;
+}
+
+.captcha-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-container {
+    display: flex;
+    padding: 24px 20px 24px 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-shadow: 0px -3px 5px rgba(37, 25, 76, 0.527835);
+    background: radial-gradient(151.72% 151.72% at 51.24% 0%, #301e59 0%, #101032 100%);
+}
+
+.spinner {
+    width: 200px !important;
+    height: 200px !important;
+    background-image: url('https://www.ignitebot.io/static/images/logo-gold.svg');
+    background-size: 94px 134px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: spinner-logo-fade 1.8s ease-in-out infinite;
+}
+
+.spinner-circle {
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50%;
+    background-image: url('https://www.ignitebot.io/static/images/spinner-section.svg');
+    background-position: left top;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    animation: spinner-circle-spin 1.2s linear infinite;
+    opacity: 0.5;
+}
+
+.reset-box-appearance {
+    display: block !important;
+    -webkit-appearance: none !important;
+    border-radius: 2px !important;
+    background-color: rgba(132, 123, 255, 0.1) !important;
+    font-size: 12px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    border: none;
+    outline: none !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 0 12px !important;
+    min-width: 130px !important;
+}
+
+.input {
+    color: #fff;
+}
+
+.input::placeholder {
+    color: rgba(132, 123, 255, 0.5);
+}
+
+.select {
+    color: rgba(132, 123, 255, 0.5);
+}
+
+.google-account-options {
+    display: flex;
+    align-items: center;
+}
+
+.google-account-select {
+    max-width: 133px;
+    margin-right: 8px;
+}
+
+.google-account-button {
+    height: 23px;
+    width: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: background-color 200ms ease;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.google-account-button:last-child {
+    margin-right: 0;
+}
+
+.add-button {
+    background-color: rgba(59, 247, 144, 0.15);
+}
+
+.add-button:hover {
+    background-color: rgba(59, 247, 144, 0.25);
+}
+
+.delete-button {
+    background-color: rgba(226, 0, 74, 0.4);
+}
+
+.delete-button:hover {
+    background-color: rgba(226, 0, 74, 0.5);
+}
+
+.add-button-icon {
+    height: 10px;
+    width: 10px;
+    background: url('https://www.ignitebot.io/static/images/new-task-green.svg') center / 10px 10px no-repeat;
+}
+
+.delete-button-icon {
+    height: 14px;
+    width: 11px;
+    background: url('https://www.ignitebot.io/static/images/delete.svg') center / 11px 14px no-repeat;
+}
+
+.proxy-input {
+    width: 155px;
+}
+
+@keyframes spinner-circle-spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-logo-fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+    text-align: left;
+}

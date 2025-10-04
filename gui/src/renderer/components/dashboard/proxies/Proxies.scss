@@ -1,0 +1,100 @@
+.proxies-page-content-box {
+    height: calc(100%);
+    margin-top: 0;
+    display: block;
+}
+
+.proxies-page-react-container {
+    height: 100%;
+    width: 100%;
+}
+
+.table-page-layout-table-container {
+    flex: 1;
+    margin: 40px;
+    padding: 16px 8px 0;
+    background-color: rgba(100, 100, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.table-page-layout-table-container-header {
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 43px;
+}
+
+.icon-component-green-plus {
+    background: center / 13px 13px no-repeat url(../../../../../assets/svg/newTaskGreen.svg);
+}
+
+/* === Table Page Layout === */
+.table-page-layout-root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.table-page-layout-table-container {
+    flex: 1;
+    margin: 40px;
+    padding: 16px 8px 0;
+    background-color: rgba(100, 100, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.table-page-layout-table-container-header {
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 43px;
+}
+
+.table-page-layout-table-container-header > div {
+    display: flex;
+}
+
+.table-page-layout-bottom-bar {
+    flex: 0 0 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    background-color: rgba(31, 31, 85, 0.46);
+}
+
+.table-page-layout-bottom-bar > * {
+    height: 100%;
+    flex: 1 1 0;
+    display: flex;
+    align-items: inherit;
+}
+
+.table-page-layout-bottom-bar-left {
+    justify-content: flex-start;
+    padding-left: 42px;
+}
+
+.table-page-layout-bottom-bar-center {
+    justify-content: center;
+}
+
+.table-page-layout-bottom-bar-right {
+    justify-content: flex-end;
+    padding-right: 36px;
+}

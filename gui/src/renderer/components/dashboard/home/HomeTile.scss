@@ -1,0 +1,74 @@
+.dashboard-tile {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    border-radius: 16px;
+    background: radial-gradient(92.12% 186.31% at 3.87% 22.94%, rgba(132, 123, 255, 0.21) 0%, rgba(132, 123, 255, 0.084) 100%);
+    padding: 32px;
+}
+
+.dashboard-tile-primary {
+    background: linear-gradient(
+        342.26deg,
+        rgba(190, 42, 80, 0.1813) -16.49%,
+        rgba(190, 42, 80, 0.5459999999999999) 43.94%,
+        rgba(190, 42, 80, 0.6971999999999999) 100.24%,
+        rgba(190, 42, 80, 0.7) 104.6%
+    );
+}
+
+.dashboard-tile-primary::before,
+.dashboard-tile-primary::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.dashboard-tile-primary::before {
+    opacity: 0.5;
+    background-image: url('../../../../../assets/logoTranslucentGradient.png');
+    background-size: 123px 183px;
+    background-position: top 40px right 31px;
+}
+
+.dashboard-tile-primary::after {
+    background-image: url('../../../../../assets/svg/dotsTranslucent.svg');
+    background-size: 179px 24px;
+    background-position: top 16px left 50%;
+}
+
+.dashboard-tile-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+
+.dashboard-tile-title,
+.dashboard-tile-subtitle {
+    color: #b6b1ff;
+}
+
+.dashboard-tile-title {
+    font-size: 21px;
+}
+
+.dashboard-tile-subtitle {
+    font-size: 17px;
+}
+
+.dashboard-tile-primary .dashboard-tile-title {
+    color: #fc7497;
+}
+
+.dashboard-tile-content {
+    font-size: 43px;
+    color: #fff;
+}

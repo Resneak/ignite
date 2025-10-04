@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package igniteclient;
+
+option go_package = "./http";
+
+
+message Header {
+    string key = 1;
+    string value = 2;
+}
+
+message Request {
+    string url = 1;
+    string method = 2;
+    repeated Header headers = 3;
+    string proxy = 4;
+    string body = 5;
+    repeated string headerOrder = 6;
+    bool useCachedClient = 7;
+    repeated int32 IgnoreBodyExceptStatus = 8;
+    bool IgnoreBody = 9;
+}
+
+message Response {
+    int32 status = 1;
+    string body = 2;
+    string headers = 3;
+    bool success = 4;
+    string error = 5;
+}
+
+service HttpService {
+    rpc SendRequest(Request) returns (Response) {}
+}

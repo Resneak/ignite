@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "lib": ["dom", "es2015", "es2016", "es2017", "es2019"],
+
+        "jsx": "react",
+        "moduleResolution": "node",
+
+        "sourceMap": true,
+        "outDir": "./dist",
+
+        "strict": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+
+        "removeComments": true,
+        "downlevelIteration": true,
+        "noUnusedLocals": true,
+        //  "noFallthroughCasesInSwitch": true ,
+        "allowSyntheticDefaultImports": true,
+        "newLine": "lf",
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        // "noImplicitReturns": true,
+        "noImplicitAny": false,
+        "experimentalDecorators": true
+    },
+    "include": ["./src", "./test", "./after-pack.js", "./webpack.**.js", "./custom.d.ts"]
+}

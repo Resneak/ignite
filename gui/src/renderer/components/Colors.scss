@@ -1,0 +1,35 @@
+// custom colors
+$background-accent: #343a40;
+$text-color: white;
+
+// bootstrap colors
+$primary: #ff58d2;
+$primary-dark: darken($primary, 2);
+$primary-darker: darken($primary, 4);
+$primary-darkest: darken($primary, 6);
+$secondary: #00ff87;
+$body-bg: #21252b;
+$body-color: white;
+
+// modals
+$modal-content-bg: $background-accent;
+$modal-content-color: $text-color;
+$modal-content-border-width: 0;
+$close-color: $text-color;
+
+// form control inputs
+$input-bg: darken($background-accent, 2);
+$input-focus-border-color: $background-accent;
+$input-color: $text-color;
+$input-border-color: $input-bg;
+$input-group-addon-bg: darken($input-bg, 5%);
+$input-group-addon-border-color: $input-bg;
+$input-focus-box-shadow: inherit;
+
+// tab bars
+$nav-tabs-border-color: $primary;
+$nav-tabs-border-width: 0;
+$nav-tabs-link-hover-border-color: $primary;
+$nav-tabs-link-active-color: darken($primary, 15%);
+$nav-tabs-link-active-border-color: $primary;
+$nav-tabs-link-active-bg: inherit;

@@ -1,0 +1,63 @@
+{
+    "name": "ignite-base",
+    "version": "1.0.0",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "setup": "npm i && shell-exec --colored-output \"npm run cli-i\" \"npm run gui-i\" \"npm run bot-i\" \"npm run http-client-i\"",
+        "cli-i": "npm --prefix ./cli/ i",
+        "gui-i": "npm --prefix ./gui/ i",
+        "bot-i": "npm --prefix ./bot/ i",
+        "http-client-i": "npm --prefix ./http-client/ i",
+        "cli": "npm --prefix ./cli/ run start-dev",
+        "fast": "npm --prefix ./cli/ run fast",
+        "cli-exe": "npm --prefix ./cli/ run exe",
+        "gui": "npm --prefix ./gui/ run start-dev",
+        "gui-persist": "npm --prefix ./gui/ run start-dev-persist",
+        "test": "jest",
+        "test-lib": "jest --testPathPattern=../ignite/lib"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "globals": {
+            "ts-jest": {
+                "tsconfig": "cli/tsconfig.json",
+                "babelConfig": ""
+            }
+        },
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": ".+\\.test\\.ts",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "json",
+            "node"
+        ]
+    },
+    "devDependencies": {
+        "@types/bluebird": "^3.5.36",
+        "@types/jest": "^26.0.24",
+        "@types/tunnel": "0.0.2",
+        "csv-parser": "^3.0.0",
+        "gulp-cli": "^2.3.0",
+        "husky": "^6.0.0",
+        "javascript-obfuscator": "^2.12.0",
+        "jest": "^26.6.3",
+        "jssha": "^3.2.0",
+        "shell-executor": "^6.0.1",
+        "ts-jest": "^26.5.6",
+        "typescript": "^4.3.5",
+        "webpack-node-externals": "^3.0.0"
+    },
+    "dependencies": {
+        "bluebird": "^3.7.2",
+        "chrome-launcher": "^0.14.0",
+        "proxy-chain": "^1.0.2",
+        "puppeteer-core": "^10.2.0",
+        "sound-play": "^1.1.0"
+    }
+}

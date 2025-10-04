@@ -1,0 +1,357 @@
+.tasks-page-content-box {
+    height: calc(100%);
+    margin-top: 0;
+}
+
+.tasks-page-react-container {
+    height: 100%;
+}
+
+.tasks-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+/* === Task List & Controls === */
+.tasks-task-list {
+    flex: 1;
+    margin: 40px;
+    margin-bottom: 8px;
+    padding: 16px 8px 0;
+    background-color: rgba(100, 100, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+/* === Top Control Bar === */
+.tasks-task-list-header {
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 43px;
+}
+
+.tasks-task-list-header-left,
+.tasks-task-list-header-right {
+    display: flex;
+}
+
+/* === Top Control Buttons === */
+.tasks-task-list-header-button {
+    position: relative;
+    z-index: 10;
+    border: none;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 25px 0 49px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 16px;
+    background-color: rgba(132, 123, 255, 0.15);
+    border-radius: 4px;
+    transition: background-color 150ms ease;
+}
+
+.tasks-task-list-header-button.tasks-task-list-header-button-no-icon {
+    padding: 0 25px;
+}
+
+.tasks-task-list-header-button:last-child {
+    margin-right: 0;
+}
+
+.tasks-task-list-header-button:hover {
+    background-color: rgba(132, 123, 255, 0.25);
+}
+
+.tasks-task-list-header-button-primary {
+    padding-right: 30px;
+    background-color: rgba(41, 200, 113, 0.15);
+}
+
+.tasks-task-list-header-button-primary:hover {
+    background-color: rgba(41, 200, 113, 0.25);
+}
+
+.tasks-button-icon {
+    position: absolute;
+    pointer-events: none;
+    left: 25px;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tasks-new-icon-green {
+    background-size: 13px 13px;
+    background-image: url('../../../../../assets/svg/newTaskGreen.svg');
+}
+
+.tasks-import-icon {
+    background-image: url('../../../../../assets/svg/importTask.svg');
+}
+
+.tasks-export-icon {
+    background-image: url('../../../../../assets/svg/exportTask.svg');
+}
+
+/* === Top Bar Search === */
+.tasks-search-input {
+    z-index: 10;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 16px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(36, 35, 90);
+    width: 240px;
+}
+
+.tasks-search-input::-webkit-input-placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
+
+/* === Actual Task Table === */
+
+.tasks-table-status-display {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.tasks-table-status-display-neutral {
+    color: #ffbd00;
+}
+
+.tasks-table-status-display-positive {
+    color: #29c871;
+}
+
+.tasks-table-status-display-negative {
+    color: #be2a50;
+}
+
+/* === Task Row Action Buttons (start, stop, etc.) === */
+.tasks-table-action-buttons {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    pointer-events: all;
+}
+
+.tasks-table-action-button {
+    display: block;
+    cursor: pointer;
+    margin-right: 14px;
+    padding: 8px;
+}
+
+.tasks-table-action-button-icon {
+    display: block;
+    cursor: pointer;
+    pointer-events: none;
+    fill: #847bff;
+    opacity: 1;
+    transition: fill 200ms ease, opacity 200ms ease-in-out;
+}
+
+.tasks-table-action-button-disabled .tasks-table-action-button-icon {
+    opacity: 0.25;
+}
+
+.tasks-table-start-button:hover .tasks-table-action-button-icon {
+    fill: #1ca95c;
+}
+
+.tasks-table-stop-button:hover .tasks-table-action-button-icon {
+    fill: #ff2b5b;
+}
+
+/* align with width of start icon so nothing jumps */
+.tasks-table-stop-button .tasks-table-action-button-icon {
+    width: 9px;
+    height: auto;
+}
+
+.tasks-table-edit-button:hover .tasks-table-action-button-icon {
+    fill: #ffbd00;
+}
+
+.tasks-table-delete-button:hover .tasks-table-action-button-icon {
+    fill: #ff2b5b;
+}
+
+/* === Bottom Control Bar === */
+.tasks-bottom-bar {
+    flex: 0 0 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    background-color: rgba(31, 31, 85, 0.46);
+}
+
+.tasks-bottom-bar-spacer {
+    flex: 1;
+}
+
+.tasks-bottom-bar-divided {
+    display: flex;
+    align-items: center;
+}
+
+.tasks-bottom-bar-divider {
+    height: 32px;
+    width: 1px;
+    background-color: rgba(132, 123, 255, 0.26);
+}
+
+.tasks-bottom-bar-button {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
+    width: 144px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 150ms ease, opacity 150ms ease;
+    background-color: transparent;
+}
+
+.tasks-bottom-bar-button:hover {
+    background-color: #0a0a27;
+}
+
+.tasks-bottom-bar-button.tasks-bottom-bar-button-disabled {
+    opacity: 0.2;
+}
+
+.tasks-bottom-bar-button.tasks-bottom-bar-button-disabled:hover {
+    background-color: transparent;
+}
+
+.tasks-bottom-bar-button.tasks-bottom-bar-divided-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.tasks-bottom-bar-button.tasks-bottom-bar-divided-right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tasks-bottom-bar-button-icon {
+    margin-right: 12px;
+    pointer-events: none;
+    fill: rgba(132, 123, 255, 0.8);
+}
+
+.tasks-bottom-bar-button-text {
+    pointer-events: none;
+}
+
+.tasks-bottom-bar-button-start .tasks-bottom-bar-button-icon {
+    fill: #29c871;
+}
+
+.tasks-bottom-bar-button-stop .tasks-bottom-bar-button-icon {
+    fill: #be2a50;
+}
+
+.tasks-bottom-bar-section {
+    height: 100%;
+    flex: 1 1 0;
+    display: flex;
+    align-items: inherit;
+}
+
+.tasks-bottom-bar-section-left {
+    justify-content: flex-start;
+    padding-left: 42px;
+}
+
+.tasks-bottom-bar-section-center {
+    justify-content: center;
+}
+
+.tasks-bottom-bar-section-right {
+    justify-content: flex-end;
+    padding-right: 36px;
+}
+
+/* === Edit/Create Modal === */
+.tasks-task-modal-submit-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    margin-bottom: -0.75rem;
+}
+
+.tasks-task-modal-count-input {
+    text-align: center;
+    width: 60px;
+    margin: 0 0.75rem 0 0 !important;
+}
+
+.tasks-task-modal-submit-button {
+    border-radius: 4px;
+    height: 40px;
+    background-color: #be2a50;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 200ms ease, opacity 200ms ease;
+    margin-bottom: 0.75rem;
+}
+
+.tasks-task-modal-submit-button > * {
+    pointer-events: none;
+}
+
+.tasks-task-modal-submit-button:hover {
+    background-color: rgb(170, 37, 70);
+}
+
+.tasks-task-modal-submit-button:active {
+    background-color: #a12342;
+}
+
+.tasks-task-modal-button-disabled {
+    opacity: 0.25;
+}
+
+.tasks-task-modal-submit-button-icon {
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.tasks-task-modal-icon-create {
+    background-image: url(../../../../../assets/svg/newTask.svg);
+}

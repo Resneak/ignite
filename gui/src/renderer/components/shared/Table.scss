@@ -1,0 +1,73 @@
+/* === Table === */
+.table-component {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    flex: 1;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.table-component-data-rows {
+    flex: 1;
+}
+
+.table-component-header-row-content,
+.table-component-data-row-content {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+}
+
+.table-component-header-row-content {
+    width: 100%;
+    color: #847bff;
+    margin-bottom: 23px;
+}
+
+.table-component-data-row {
+    padding: 0 8px 0 0;
+}
+
+.table-component-header-row {
+    padding: 0 14px 0 0;
+    flex-grow: 0;
+}
+
+.table-component-data-row-content {
+    color: #fff;
+    height: 64px;
+    align-items: center;
+    background-color: rgba(132, 123, 255, 0.05);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    padding: 0 8px 0 0;
+}
+
+.table-component-data-row-content:hover {
+    background-color: rgba(132, 123, 255, 0.08);
+}
+
+.table-component-data-row-content.table-component-data-row-content-selected {
+    background-color: rgba(132, 123, 255, 0.13);
+}
+
+.table-component-data-row-content.table-component-data-row-content-selected:hover {
+    background-color: rgba(132, 123, 255, 0.16);
+}
+
+.table-component-header-cell,
+.table-component-data-cell {
+    padding-left: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 0;
+    flex-shrink: 0;
+    pointer-events: none;
+}

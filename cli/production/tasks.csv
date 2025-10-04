@@ -1,0 +1,6 @@
+STORE, MODE, PRODUCT, SIZE, DELAY, PROFILE NAME, ATC QUANTITY
+footlocker, Restock, W2288111, 8.5-12.5, 3000, profileOne, 1
+footlocker, Rotate, W2288111, RANDOM, 3000, profileOne, 1
+footlocker, Rotate, W2288111, RANDOM, , profileTwo, 3
+footlocker, Restock, W2288111, 8, , profile three, 4
+

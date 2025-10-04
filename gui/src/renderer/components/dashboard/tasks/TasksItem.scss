@@ -1,0 +1,82 @@
+.task-table-action-buttons {
+    display: flex !important;
+    align-items: center;
+    cursor: default;
+    pointer-events: all;
+}
+
+.tasks-table-action-button {
+    display: block;
+    cursor: pointer;
+    margin-right: 14px;
+    padding: 8px;
+}
+
+.tasks-table-action-button-icon {
+    display: block;
+    cursor: pointer;
+    pointer-events: none;
+    fill: #847bff;
+    opacity: 1;
+    transition: fill 200ms ease, opacity 200ms ease-in-out;
+}
+
+.tasks-table-action-button-disabled .tasks-table-action-button-icon {
+    opacity: 0.25;
+}
+
+.tasks-table-start-button:hover .tasks-table-action-button-icon {
+    fill: #1ca95c;
+}
+
+.tasks-table-stop-button:hover .tasks-table-action-button-icon {
+    fill: #ff2b5b;
+}
+
+/* align with width of start icon so nothing jumps */
+.tasks-table-stop-button .tasks-table-action-button-icon {
+    width: 9px;
+    height: auto;
+}
+
+.tasks-table-edit-button:hover .tasks-table-action-button-icon {
+    fill: #ffbd00;
+}
+
+.tasks-table-delete-button:hover .tasks-table-action-button-icon {
+    fill: #ff2b5b;
+}
+
+.button-component-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.task-col-0 {
+    width: 5.06061%;
+}
+
+.task-col-1 {
+    width: 9.09091%;
+}
+
+.task-col-4 {
+    width: 11%;
+}
+
+.task-col-2 {
+    width: 12.2424%;
+}
+
+.task-col-3 {
+    width: 12%;
+}
+
+.task-col-5,
+.task-col-6 {
+    width: 12.1212%;
+}
+.task-col-7,
+.task-col-8 {
+    width: 13%;
+}

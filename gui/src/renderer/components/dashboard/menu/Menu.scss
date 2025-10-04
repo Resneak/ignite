@@ -1,0 +1,32 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    -webkit-app-region: drag;
+    background: linear-gradient(0deg, rgba(100, 100, 255, 0.1) -4.5%, #32328010 100%);
+    height: 5rem;
+}
+
+/* === Navbar Content Container === */
+.nav-title-box {
+    display: flex;
+}
+
+.nav-title-box.inactive {
+    display: none;
+}
+
+.nav-logo {
+    display: block;
+    width: 40px;
+    height: auto;
+    margin-left: 25px;
+    margin-right: 110px;
+}
+
+.nav-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 22px;
+    height: auto;
+}

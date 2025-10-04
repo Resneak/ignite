@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+html,
+body,
+#root,
+.page {
+    height: 100%;
+    width: 100%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+button {
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.title-bar {
+    flex: 0;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #14143b;
+    -webkit-app-region: drag;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(138.24% 138.24% at 50% -31.6%, #2c1c55 0%, #101032 100%);
+}
+
+.logo {
+    margin-top: 47px;
+    width: 94px;
+    height: 134px;
+    background: center / contain no-repeat url(../../../../assets/svg/logoGold.svg);
+    margin-bottom: 47px;
+}
+
+.status {
+    padding: 9px 42px;
+    background-color: #0d0d31;
+    border-radius: 19px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ac0247;
+    margin-bottom: 32px;
+}
+
+.retry-button {
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #be2a50;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px 35px;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    &:hover {
+        background-color: #b0274a;
+    }
+    &:active {
+        background-color: #a72446;
+    }
+}

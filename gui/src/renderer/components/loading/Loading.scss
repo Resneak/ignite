@@ -1,0 +1,50 @@
+.radial-glow {
+    position: absolute;
+    left: -2.99%;
+    right: -28.4%;
+    top: -68.44%;
+    bottom: 32.22%;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.5;
+    display: block;
+    background: radial-gradient(49% 49% at 49% 49%, #3a3a8d 0%, rgba(15, 15, 53, 0) 100%);
+}
+
+body,
+.main-content,
+.spinner-content,
+.modal-background {
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.main-content,
+.spinner-content {
+    background-color: #0a0a27;
+}
+.spinner-content {
+    position: fixed;
+    height: 100vh;
+    z-index: 99999;
+    width: 100vw;
+    background: #030b1b;
+}
+.spinner-content > h1 {
+    position: absolute;
+    transform: translate(-50%, -40%);
+    top: 60%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #c1c1c1;
+    left: 50%;
+}
+
+.spinner {
+    position: absolute;
+    transform: translate(-50%, -55%);
+    top: 45%;
+    left: 50%;
+    height: auto;
+    width: 400px;
+}

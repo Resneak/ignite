@@ -1,0 +1,138 @@
+.button-component {
+    position: relative;
+    z-index: 10;
+    border: none;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 25px 0 49px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 16px;
+    background-color: rgba(132, 123, 255, 0.15);
+    border-radius: 4px;
+    transition: background-color 150ms ease;
+}
+
+.button-component:hover {
+    background-color: rgba(132, 123, 255, 0.25);
+}
+
+.button-component:active {
+    background-color: rgba(132, 123, 255, 0.3);
+}
+
+.button-component.button-component-disabled {
+    opacity: 0.2;
+}
+.button-component.button-component-disabled:hover {
+    opacity: 0.2;
+}
+.button-component.button-component-disabled:active {
+    opacity: 0.2;
+}
+
+.button-component-primary {
+    background-color: rgba(41, 200, 113, 0.15);
+}
+
+.button-component-primary:hover {
+    background-color: rgba(41, 200, 113, 0.25);
+}
+
+.button-component-primary:active {
+    background-color: rgba(41, 200, 113, 0.3);
+}
+
+.button-component.button-component-no-icon {
+    padding: 0 25px;
+}
+
+.button-component-icon {
+    position: absolute;
+    pointer-events: none;
+    left: 25px;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-component-text {
+    pointer-events: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.button-component-icon > * {
+    display: block;
+}
+
+.button-component-divided-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-component-divider-line {
+    height: 32px;
+    width: 1px;
+    background-color: rgba(132, 123, 255, 0.26);
+}
+
+.button-component-divided-container .button-component-divided:nth-child(1) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+}
+
+.button-component-divided-container .button-component.button-component-divided:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+}
+
+.button-component.button-component-divided {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0;
+    transition: background-color 150ms ease, opacity 150ms ease;
+    background-color: transparent;
+}
+
+.button-component.button-component-divided:hover {
+    background-color: #0a0a27;
+}
+
+.button-component-disabled:hover {
+    cursor: not-allowed !important;
+}
+
+.button-component.button-component-divided.button-component-disabled:hover,
+.button-component.button-component-divided.button-component-disabled:active {
+    background-color: initial;
+}
+
+.button-component.button-component-divided:active {
+    background-color: #08081f;
+}
+
+.button-component.button-component-divided .button-component-icon {
+    position: relative;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    transform: unset;
+    margin-right: 12px;
+}
